@@ -26,3 +26,11 @@ jobs:
 
       - name: Execute build
         run: yarn build
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: test dopo la build
+      run: yarn test
